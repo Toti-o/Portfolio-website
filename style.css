@@ -348,41 +348,59 @@ section .button button:hover {
   color: yellow;
 }
 
-/* Interests Section */
-.Intrests .boxes {
+.Interests .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.Intrests .boxes .box {
+
+.Interests .boxes .box {
   margin: 20px 0;
   width: calc(100% / 3 - 20px);
-  text-align: center;
   border-radius: 12px;
   padding: 30px 10px;
   background-color: #111;
   color: white;
   transition: transform 0.3s ease;
+
+  /* Wrapping and overflow fixes */
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.Intrests .boxes .box:hover {
+
+.Interests .boxes .box:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 15px yellow;
 }
-.Intrests .boxes .box .icon {
+
+.Interests .boxes .box .icon {
   font-size: 3rem;
   margin-bottom: 15px;
   color: yellow;
 }
-.Intrests .boxes .box .topic {
+
+.Interests .boxes .box .topic {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: yellow;
+  text-align: center;
 }
-.Intrests .boxes .box p {
+
+.Interests .boxes .box p {
   font-size: 0.95rem;
   color: white;
   line-height: 1.6;
+  text-align: justify;
+  word-break: break-word;
+  white-space: normal;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Contact Section */
