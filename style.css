@@ -1,0 +1,613 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: yellow;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: yellow;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  height: 10vh;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.logo span {
+  color: yellow;
+  text-shadow: 0 0 10px yellow;
+}
+
+.hamburg,
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+  display: flex;
+}
+
+.nav-container .links a {
+  position: relative;
+  font-size: 1.2rem;
+  color: yellow;
+  margin: 0 20px;
+  font-weight: 550;
+  transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: yellow;
+  transition: 0.2s linear;
+}
+.nav-container .links a:hover::before {
+  width: 100%;
+}
+.nav-container .links a:hover {
+  color: white;
+}
+
+/* Dropdown */
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  backdrop-filter: blur(4px) brightness(40%);
+  box-shadow: 0 0 20px black;
+  transition: 0.2s linear;
+}
+.dropdown .links a {
+  display: flex;
+  color: white;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  transition: 0.2s linear;
+}
+.dropdown .links a:hover {
+  background-color: yellow;
+}
+
+/* Main Section */
+section {
+  width: 100%;
+  min-height: 90vh;
+}
+
+section .main-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  align-items: center;
+}
+
+.main-container .image {
+  width: 500px;
+  height: 80vh;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 50px yellow;
+}
+.main-container .image img {
+  width: 100%;
+}
+.main-container .image:hover {
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% { scale: 1; }
+  50% { scale: 1.05; }
+  100% { scale: 1; }
+}
+
+.main-container .content {
+  color: white;
+  width: 40%;
+}
+.content h1 {
+  font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+.content h1 span {
+  color: yellow;
+  text-shadow: 0 0 10px yellow;
+}
+
+.content .typewriter {
+  font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+  font-weight: 600;
+}
+.content .typewriter-text {
+  color: yellow;
+  text-shadow: 0 0 10px yellow;
+}
+
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+  margin: 10px 0;
+}
+
+.social-links i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid yellow;
+  border-radius: 50%;
+  color: yellow;
+  margin: 5px 15px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+.social-links i:hover {
+  scale: 1.3;
+  color: black;
+  background-color: yellow;
+  filter: drop-shadow(0 0 10px yellow);
+}
+
+.content button {
+  width: 50%;
+  height: 6vh;
+  margin: 30px;
+  background-color: yellow;
+  color: white;
+  border: none;
+  font-size: 120%;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+.content button:hover {
+  scale: 1.1;
+  color: yellow;
+  border: 2px solid yellow;
+  background-color: transparent;
+  box-shadow: 0 0 40px yellow;
+}
+
+/* About Section */
+section .content {
+  width: 80%;
+  margin: 0 auto;
+}
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: yellow;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about .left {
+  width: 45%;
+}
+.about .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about .right {
+  width: 55%;
+}
+section .topic {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about .right p {
+  text-align: justify;
+  color: white;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  font-size: 25px;
+  font-weight: 400;
+  background: yellow;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  border-color: yellow;
+  background-color: white;
+  color: yellow;
+}
+
+/* Skills Section */
+.Skills {
+  background: black;
+}
+.Skills .content {
+  padding: 40px 0;
+}
+.Skills .Skill-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Skill-details .text {
+  width: 50%;
+}
+.Skill-details .experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.Skill-details .experience .num {
+  color: white;
+  font-size: 80px;
+}
+.Skill-details .experience .exp {
+  color: white;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.Skill-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Skill-details .box {
+  width: calc(50% - 20px);
+  margin: 20px 0;
+}
+.Skill-details .boxes .topic {
+  font-size: 20px;
+  color: yellow;
+}
+.Skill-details .boxes .per {
+  font-size: 60px;
+  color: yellow;
+}
+
+/* Interests Section */
+.Intrests .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Intrests .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  background-color: #111;
+  color: white;
+  transition: transform 0.3s ease;
+}
+.Intrests .boxes .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px yellow;
+}
+.Intrests .boxes .box .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: yellow;
+}
+.Intrests .boxes .box .topic {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: yellow;
+}
+.Intrests .boxes .box p {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.Contact {
+  background-color: black;
+  padding: 60px 0;
+}
+
+.Contact .content {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.Contact .topic {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.Contact p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.Contact .button button {
+  background: yellow;
+  color: black;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Contact .button button:hover {
+  background: white;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .main-container .image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .main-container .content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Skill-details {
+    flex-direction: column;
+  }
+
+  .Skill-details .text,
+  .Skill-details .boxes {
+    width: 100%;
+  }
+
+  .intrests .boxes .box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about .about-details {
+    flex-direction: column;
+  }
+
+  .about .left,
+  .about .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about .left img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+
+  .hamburg {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .dropdown {
+    transform: translateY(0);
+  }
+
+  .dropdown .links {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 5px;
+  }
+
+  .content button {
+    width: 80%;
+  }
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid yellow;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.contact-form .form-group input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 0, 0.1);
+  box-shadow: 0 0 10px yellow;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: transparent;
+  color: yellow;
+  border: 2px solid yellow;
+  box-shadow: 0 0 10px yellow;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid yellow;
+  color: yellow;
+  font-size: 0.5rem;
+  font-weight: 600;
+  animation: typing 3s steps(20, end) forwards, blink 0.75s step-end infinite;
+}
+footer {
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .text span {
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer .text a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .text a:hover {
+  text-decoration: underline;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 19ch; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: yellow; }
+}
