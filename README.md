@@ -1,5 +1,5 @@
 # Portfolio-website
-Hi there! I’m Faith, a filmmaker steppinginto the world of software development. This portfolio marks week 2 of a journey that blends creativity and code. It's still a work-in-progress, but every section represents a milestone on my learning path.
+Hi there! I’m Faith, a filmmaker stepping into the world of software development. This portfolio marks week 2 of a journey that blends creativity and code. It's still a work-in-progress, but every section represents a milestone on my learning path.
 
  About the Project
 This is my first developer portfolio, built from scratch using HTML and CSS. It’s simple, clean, and responsive ,showcasing not only what I’ve learned so far, but where I’m headed.
